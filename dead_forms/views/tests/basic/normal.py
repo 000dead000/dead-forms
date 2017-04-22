@@ -4,7 +4,7 @@ from dar_forms.mixins.tests import TestsBasicMixin
 
 
 class TestsBasicNormalCBV(TestsBasicMixin):
-    template_name = "dar-forms/tests/basic/normal.html"
+    template_name = "dead-forms/tests/basic/normal.html"
 
     def get_context_data(self, **kwargs):
         context = super(TestsBasicNormalCBV, self).get_context_data(**kwargs)

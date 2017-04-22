@@ -13,7 +13,7 @@ from dar_forms.mixins.tests import TestsBasicMixin
 
 
 class TestsBasicAJAXCBV(EnsureCSRFMixin, JSONResponseMixin, AjaxResponseMixin, TestsBasicMixin):
-    template_name = "dar-forms/tests/basic/ajax.html"
+    template_name = "dead-forms/tests/basic/ajax.html"
 
     def get_context_data(self, **kwargs):
         context = super(TestsBasicAJAXCBV, self).get_context_data(**kwargs)
@@ -23,7 +23,7 @@ class TestsBasicAJAXCBV(EnsureCSRFMixin, JSONResponseMixin, AjaxResponseMixin, T
         return context
 
     def get_ajax(self, request, *args, **kwargs):
-        template_file = "dar-forms/tests/basic/table/main.html"
+        template_file = "dead-forms/tests/basic/table/main.html"
         params = {}
 
         html = render_to_string(
