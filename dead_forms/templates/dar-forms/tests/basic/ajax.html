@@ -1,0 +1,24 @@
+{% extends "dar-forms/tests/basic/base.html" %}
+
+{% block DAR_FORMS_TESTS_BODY_CONTENT %}
+    <span id="content">
+    </span>
+{% endblock %}
+
+{% block JS_BOTTOM %}
+    <script type="application/javascript">
+        var AJAX_URL = "{% url 'dar-forms:tests-basic-ajax' %}";
+
+        {% include "dar-forms/tests/basic/table.js" %}
+
+        $(document).ready(function () {
+            $.get(
+                AJAX_URL,
+                function(data){
+                    $("#content").replaceWith(data.html);
+                    dar_forms_tests.init();
+                }
+            );
+        });
+    </script>
+{% endblock %}
