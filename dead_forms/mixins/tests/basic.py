@@ -2,11 +2,11 @@
 
 from django.views.generic import FormView
 
-from dar_forms.forms.tests.basic import BasicForm
-from dar_forms.mixins import AddMessageMixin
-from dar_forms.mixins import AddRequestToFormMixin
+from dead_forms.forms.tests.basic import BasicForm
+from dead_forms.mixins import AddMessageMixin
+from dead_forms.mixins import AddRequestToFormMixin
 
-from dar_forms.layouts.tests import BasicLayout
+from dead_forms.layouts.tests import BasicLayout
 
 
 class TestsBasicMixin(AddMessageMixin, AddRequestToFormMixin, FormView):
