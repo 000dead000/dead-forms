@@ -3,16 +3,16 @@
 from crispy_forms.layout import HTML
 from crispy_forms.layout import Div
 
-from dead_forms.layouts import BaseLayout
 from dead_forms.layouts.base import buttons_layout
 from dead_forms.layouts.base import panel_layout
 from dead_forms.layouts.base import row_layout
 from dead_forms.layouts.base import rule_layout
 from dead_forms.layouts.base import subtitle_layout
 from dead_forms.layouts.base import title_layout
+from .base import BaseTestLayout
 
 
-class BasicToolsLayout(BaseLayout):
+class BasicToolsLayout(BaseTestLayout):
     @staticmethod
     def create_field_1():
         field = "field_1"
@@ -171,22 +171,8 @@ class BasicToolsLayout(BaseLayout):
             "field": titles,
         }
 
-    def wrap_tr(self, field):
-        description = field.get("description")
-        example = field.get("field")
-
-        self.layout.fields.append(HTML("<tr>"))
-        self.layout.fields.append(HTML("<td>"))
-        self.layout.fields.append(HTML(description))
-        self.layout.fields.append(HTML("</td>"))
-        self.layout.fields.append(HTML("<td>"))
-        self.layout.fields.append(example)
-        self.layout.fields.append(HTML("</td>"))
-        self.layout.fields.append(HTML("</tr>"))
-
     def make_layout(self):
         fields = [
-            # self.create_field_1(),
             self.create_buttons(),
             self.create_panels(),
             self.create_rows(),
@@ -197,7 +183,3 @@ class BasicToolsLayout(BaseLayout):
 
         for field in fields:
             self.wrap_tr(field)
-
-    def __init__(self, *args, **kwargs):
-        super(BasicToolsLayout, self).__init__(*args, **kwargs)
-        self.make_layout()

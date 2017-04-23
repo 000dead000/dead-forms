@@ -1,18 +1,18 @@
 {% extends "dead-forms/tests/basic/base.html" %}
 
 {% block TEST_BODY_CONTENT %}
-    {# {% include "dead-forms/tests/basic/table/main.html" %} #}
-    HOLA mundo
+    <form action="{{ action|default_if_none:'#' }}" id="dead-form" class="no-submit dead-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% crispy form form_layout %}
+            </tbody>
+        </table>
+    </form>
 {% endblock %}
-
-{% comment %}
-{% block JS_BOTTOM %}
-    <script type="application/javascript">
-        {% include "dead-forms/tests/basic/table.js" %}
-
-        $(document).ready(function () {
-           dar_forms_tests.init();
-        });
-    </script>
-{% endblock %}
-{% endcomment %}
