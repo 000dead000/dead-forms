@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from dar_forms.mixins.tests import TestsBasicMixin
+from dead_forms.mixins.tests import TestsBasicMixin
 
 
 class TestsBasicNormalCBV(TestsBasicMixin):

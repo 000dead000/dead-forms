@@ -5,11 +5,11 @@ import time
 from django.views.generic import FormView
 from django.template.loader import render_to_string
 
-from dar_js_utilities.mixins import AjaxResponseMixin
-from dar_js_utilities.mixins import JSONResponseMixin
-from dar_js_utilities.mixins import EnsureCSRFMixin
+from dead_common.mixins import AjaxResponseMixin
+from dead_common.mixins import JSONResponseMixin
+from dead_common.mixins import EnsureCSRFMixin
 
-from dar_forms.mixins.tests import TestsBasicMixin
+from dead_forms.mixins.tests import TestsBasicMixin
 
 
 class TestsBasicAJAXCBV(EnsureCSRFMixin, JSONResponseMixin, AjaxResponseMixin, TestsBasicMixin):
