@@ -1,4 +1,4 @@
-{% extends "dar-forms/tests/home.html" %}
+{% extends "dead-forms/tests/home.html" %}
 
 {% block DAR_FORMS_TESTS_BODY %}
     <div class="text-right">
@@ -7,7 +7,7 @@
                 Recargar
             </button>
 
-            <a href="{% url 'dar-forms:tests' %}" class="btn btn-primary">
+            <a href="{% url 'dead-forms:tests' %}" class="btn btn-primary">
                 Regresar
             </a>
         </div>
@@ -15,7 +15,7 @@
 
     <h1>Forms</h1>
 
-    {% include "dar-forms/tests/basic/navbar.html" %}
+    {% include "dead-forms/tests/basic/navbar.html" %}
 
     {% block DAR_FORMS_TESTS_BODY_CONTENT %}{% endblock %}
 {% endblock %}

@@ -1,12 +1,12 @@
-{% extends "dar-forms/tests/basic/base.html" %}
+{% extends "dead-forms/tests/basic/base.html" %}
 
 {% block DAR_FORMS_TESTS_BODY_CONTENT %}
-    {% include "dar-forms/tests/basic/table/main.html" %}
+    {% include "dead-forms/tests/basic/table/main.html" %}
 {% endblock %}
 
 {% block JS_BOTTOM %}
     <script type="application/javascript">
-        {% include "dar-forms/tests/basic/table.js" %}
+        {% include "dead-forms/tests/basic/table.js" %}
 
         $(document).ready(function () {
            dar_forms_tests.init();

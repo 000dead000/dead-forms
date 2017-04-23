@@ -8,10 +8,11 @@ from .views import TestsBasicNormal
 from .views import TestsBasicAJAX
 
 urlpatterns = [
+    # home
     url(
-        r'^tests$',
+        r'^$',
         TestsHome,
-        name='tests'
+        name='tests-home'
     ),
 
     # Basic
