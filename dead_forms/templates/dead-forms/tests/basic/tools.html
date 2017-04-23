@@ -1,5 +1,20 @@
 {% extends "dead-forms/tests/basic/base.html" %}
 
 {% block TEST_BODY_CONTENT %}
-TOOLS
+    <form action="{{ action|default_if_none:'#' }}" id="dead-form" class="no-submit dead-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% crispy form form_layout %}
+                </tbody>
+            </table>
+        </div>
+    </form>
 {% endblock %}

@@ -7,5 +7,7 @@ from dead_forms.forms import BaseForm
 
 class BasicToolsForm(BaseForm):
     field_1 = forms.CharField(
-        label="Field 1"
+        label="Field 1",
+        max_length=200,
+        required=False
     )
