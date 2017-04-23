@@ -1,37 +1,34 @@
 # -*- coding: utf-8 -*-
 
 from crispy_forms.layout import Div
+from crispy_forms.layout import HTML
+
+from dead_common import utilities
 
 
-def row_layout_fixed(elements, size, extra_css_class="", id=""):
-    row_css_class = "col-xs-12 col-md-{}".format(size)
+def row_layout(elements, extra_css_class="", id=None):
+    if not id:
+        id = utilities.generate_key()
+
+    try:
+        default_col_size = int(12 / len(elements))
+    except:
+        default_col_size = 12
+
     cols = []
 
     for element in elements:
-        cols.append(Div(
-            element,
-            css_class=row_css_class
-        ))
+        size = element.get("size", default_col_size)
+        content = element.get("content", HTML(""))
+        col_css = element.get("css", "")
+        col_id = element.get("id", utilities.generate_key())
 
-    return Div(
-        *cols,
-        css_class="row {}".format(extra_css_class),
-        id=id
-    )
-
-
-def row_layout_flexible(elements, sizes, extra_css_class="", id=""):
-    cols = []
-
-    idx = -1
-    for element in elements:
-        idx += 1
-        size = sizes[idx]
-        row_css_class = "col-xs-12 col-md-{}".format(size)
+        row_css_class = "col-xs-12 col-md-{} {}".format(size, col_css)
 
         cols.append(Div(
-            element,
-            css_class=row_css_class
+            content,
+            css_class=row_css_class,
+            id=col_id
         ))
 
     return Div(

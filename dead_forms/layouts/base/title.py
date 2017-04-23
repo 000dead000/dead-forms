@@ -3,7 +3,7 @@
 from crispy_forms.layout import HTML
 
 
-def title_layout(title, markup="h3", css_class="text-primary"):
+def title_layout(title, markup="h3", css_class=""):
     return HTML(
         u"""
         <{} class="{}">{}</{}>
