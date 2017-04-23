@@ -5,7 +5,8 @@ var dead_forms_basic = {
     chosen_select: function () {
         $(".chosen-select").chosen({
             disable_search_threshold: 10,
-            no_results_text: "No hay resultados para esta búsqueda"
+            no_results_text: "No hay resultados para esta búsqueda",
+            placeholder_text_multiple: "Selecciona algunos de los elementos"
         });
     },
 

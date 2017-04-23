@@ -21,7 +21,7 @@ class BasicNormalForm(BaseForm):
         choices=BLANK_CHOICE_DASH + list(DUMMY_OPTIONS),
         initial="",
         help_text=" ",
-        required = False
+        required=False
     )
 
     field_chosen_select_3 = forms.MultipleChoiceField(
@@ -29,5 +29,5 @@ class BasicNormalForm(BaseForm):
         choices=DUMMY_OPTIONS,
         initial="",
         help_text=" ",
-        required = False
+        required=False
     )
