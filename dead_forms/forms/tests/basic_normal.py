@@ -23,3 +23,11 @@ class BasicNormalForm(BaseForm):
         help_text=" ",
         required = False
     )
+
+    field_chosen_select_3 = forms.MultipleChoiceField(
+        label="Opciones 3",
+        choices=DUMMY_OPTIONS,
+        initial="",
+        help_text=" ",
+        required = False
+    )

@@ -11,11 +11,13 @@ class BasicNormalLayout(BaseTestLayout):
     def make_chosen_select():
         field_1 = chosen_select_layout("field_chosen_select_1")
         field_2 = chosen_select_layout("field_chosen_select_2")
+        field_3 = chosen_select_layout("field_chosen_select_3")
         description = "Chosen Select"
 
         field = Div(
             field_1,
-            field_2
+            field_2,
+            field_3,
         )
 
         return {
