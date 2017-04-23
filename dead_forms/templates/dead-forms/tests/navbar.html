@@ -10,12 +10,18 @@
         </div>
         <div class="collapse navbar-collapse" id="dead-forms-tests-navbar">
             <ul class="nav navbar-nav">
+                <li {% if not tests_tab %}class="active"{% endif %}>
+                    <a href="{% url 'dead-forms:tests-home' %}">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    </a>
+                </li>
+
                 <li {% if tests_tab == 'basic' %}class="active"{% endif %}>
                     <a href="{% url 'dead-forms:tests-basic-normal' %}">Basic</a>
                 </li>
 
                 <li {% if tests_tab == 'datetime' %}class="active"{% endif %}>
-                    <a href="#">Date Time</a>
+                    <a href="#" class="no-link">Date Time</a>
                 </li>
             </ul>
         </div>

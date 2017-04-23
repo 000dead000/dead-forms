@@ -2,10 +2,9 @@
 
 from django.conf.urls import url
 
-from .views import TestsHome
-
-from .views import TestsBasicNormal
-from .views import TestsBasicAJAX
+from .views.tests import TestsHome
+from .views.tests.basic import TestsBasicNormal
+from .views.tests.basic import TestsBasicAJAX
 
 urlpatterns = [
     # home

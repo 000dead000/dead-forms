@@ -1,15 +1,6 @@
-{% extends "base.html" %}
+{% extends "dead-forms/tests/base.html" %}
 
-{% block BODY %}
-    <h1>DAR - Forms <small>tests</small></h1>
-
-    {% include "dar-forms/tests/navbar.html" %}
-
-    {% block DAR_FORMS_TESTS_BODY %}{% endblock %}
-
-    {% if not tests_tab %}
-        <img src="{% static 'dead-common/images/tests.png' %}" class="img-responsive center-block">
-    {% endif %}
-
+{% block TEST_BODY %}
+    <img src="{% static 'dead-common/images/tests.png' %}" class="img-responsive center-block">
 {% endblock %}
 
