@@ -1,4 +1,8 @@
 <ul class="nav nav-tabs">
+    <li role="presentation" {% if tests_subtab == 'tools' %}class="active"{% endif %}>
+        <a href="{% url 'dead-forms:tests-basic-tools' %}">Tools</a>
+    </li>
+
     <li role="presentation" {% if tests_subtab == 'normal' %}class="active"{% endif %}>
         <a href="{% url 'dead-forms:tests-basic-normal' %}">Normal</a>
     </li>

@@ -3,6 +3,7 @@
 from django.conf.urls import url
 
 from .views.tests import TestsHome
+from .views.tests.basic import TestsBasicTools
 from .views.tests.basic import TestsBasicNormal
 from .views.tests.basic import TestsBasicAJAX
 
@@ -15,6 +16,12 @@ urlpatterns = [
     ),
 
     # Basic
+    url(
+        r'^tests/basic/tools$',
+        TestsBasicTools,
+        name='tests-basic-tools'
+    ),
+
     url(
         r'^tests/basic/normal$',
         TestsBasicNormal,

@@ -1,4 +1,4 @@
-var dar_forms_basic = {
+var dead_forms_basic = {
     /**
      * Chosen select
      */

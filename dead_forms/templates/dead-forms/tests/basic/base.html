@@ -1,21 +1,7 @@
-{% extends "dead-forms/tests/home.html" %}
+{% extends "dead-forms/tests/base.html" %}
 
-{% block DAR_FORMS_TESTS_BODY %}
-    <div class="text-right">
-        <div class="btn-group" role="group" aria-label="...">
-            <button type="button" class="btn btn-success dar-refresh">
-                Recargar
-            </button>
-
-            <a href="{% url 'dead-forms:tests' %}" class="btn btn-primary">
-                Regresar
-            </a>
-        </div>
-    </div>
-
-    <h1>Forms</h1>
-
+{% block TEST_BODY %}
     {% include "dead-forms/tests/basic/navbar.html" %}
 
-    {% block DAR_FORMS_TESTS_BODY_CONTENT %}{% endblock %}
+    {% block TEST_BODY_CONTENT %}{% endblock %}
 {% endblock %}
