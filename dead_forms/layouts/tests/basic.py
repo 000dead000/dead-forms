@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from dar_forms.layouts import BaseLayout
-from dar_forms.layouts.basic import chosen_select_layout
+from dead_forms.layouts import BaseLayout
+from dead_forms.layouts.basic import chosen_select_layout
 
 
 class BasicLayout(BaseLayout):
