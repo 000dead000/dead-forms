@@ -2,8 +2,8 @@
 
 from django.views.generic import FormView
 
-from dead_forms.mixins import AddMessageMixin
-from dead_forms.mixins import AddRequestToFormMixin
+from .add_message import AddMessageMixin
+from .add_request_to_form import AddRequestToFormMixin
 
 
 class BaseFormMixin(AddMessageMixin, AddRequestToFormMixin, FormView):

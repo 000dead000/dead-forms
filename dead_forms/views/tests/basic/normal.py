@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from dead_forms.mixins.tests import TestsBasicMixin
+from dead_forms.mixins import BaseFormMixin
 
 
-class TestsBasicNormalCBV(TestsBasicMixin):
+class TestsBasicNormalCBV(BaseFormMixin):
     template_name = "dead-forms/tests/basic/normal.html"
 
     def get_context_data(self, **kwargs):

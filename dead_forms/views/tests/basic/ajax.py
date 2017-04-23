@@ -2,17 +2,16 @@
 
 import time
 
-from django.views.generic import FormView
 from django.template.loader import render_to_string
 
 from dead_common.mixins import AjaxResponseMixin
 from dead_common.mixins import JSONResponseMixin
 from dead_common.mixins import EnsureCSRFMixin
 
-from dead_forms.mixins.tests import TestsBasicMixin
+from dead_forms.mixins import BaseFormMixin
 
 
-class TestsBasicAJAXCBV(EnsureCSRFMixin, JSONResponseMixin, AjaxResponseMixin, TestsBasicMixin):
+class TestsBasicAJAXCBV(EnsureCSRFMixin, JSONResponseMixin, AjaxResponseMixin, BaseFormMixin):
     template_name = "dead-forms/tests/basic/ajax.html"
 
     def get_context_data(self, **kwargs):

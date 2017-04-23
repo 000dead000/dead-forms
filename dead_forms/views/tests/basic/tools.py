@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from dead_forms.mixins.tests import BaseFormMixin
+from dead_forms.mixins import BaseFormMixin
+
+from dead_forms.forms.tests import BasicToolsForm
 
 
 class TestsBasicToolsCBV(BaseFormMixin):
     template_name = "dead-forms/tests/basic/tools.html"
+    form_class = BasicToolsForm
 
     def get_context_data(self, **kwargs):
         context = super(TestsBasicToolsCBV, self).get_context_data(**kwargs)
