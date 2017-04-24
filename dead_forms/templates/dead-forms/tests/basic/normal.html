@@ -3,16 +3,6 @@
 {% block TEST_BODY_CONTENT %}
     <form action="{{ action|default_if_none:'#' }}" id="dead-form" class="no-submit dead-form" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>Description</th>
-                    <th>Example</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% crispy form form_layout %}
-            </tbody>
-        </table>
+        {% include "dead-forms/tests/basic/form.html" %}
     </form>
 {% endblock %}

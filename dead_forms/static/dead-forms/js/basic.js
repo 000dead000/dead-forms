@@ -52,48 +52,38 @@ var dead_forms_basic = {
     /**
      * Dual listbox
      */
-    // dual_listbox: function () {
-    //     $(".dual-listbox").bootstrapDualListbox({
-    //         filterTextClear: "Mostrar todos",
-    //         filterPlaceHolder: "Filtrar",
-    //         moveAllLabel: "Seleccionar todos",
-    //         removeAllLabel: "Deseleccionar todos",
-    //         infoText: "Mostrando todos {0}",
-    //         infoTextFiltered: '<span class="label label-warning">Filtrado</span> {0} de {1}',
-    //         infoTextEmpty: "Lista vacía"
-    //     });
-    // },
+    dual_listbox: function () {
+        $(".dual-listbox").bootstrapDualListbox({
+            filterTextClear: "Mostrar todos",
+            filterPlaceHolder: "Filtrar",
+            moveAllLabel: "Seleccionar todos",
+            removeAllLabel: "Deseleccionar todos",
+            infoText: "Mostrando todos {0}",
+            infoTextFiltered: '<span class="label label-warning">Filtrado</span> {0} de {1}',
+            infoTextEmpty: "Lista vacía"
+        });
+    },
 
     /**
      * Toggle checkbox
      */
-    // toggle_checkbox: function () {
-    //     $(".toggle-checkbox").bootstrapToggle({
-    //         on: "Si",
-    //         off: "No",
-    //         onstyle: "success",
-    //         offstyle: "danger"
-    //     });
-    // },
-
-    /**
-     * Display maxlength
-     */
-    // display_maxlength: function () {
-    //     $('.display-maxlength').maxlength({
-    //         alwaysShow: true,
-    //         placement: 'right'
-    //     });
-    // },
+    toggle_checkbox: function () {
+        $(".toggle-checkbox").bootstrapToggle({
+            on: "Si",
+            off: "No",
+            onstyle: "success",
+            offstyle: "danger"
+        });
+    },
 
     /**
      * After AJAX
      */
     after_ajax: function () {
-        // this.chosen_select();
-        // this.bs_file();
-        // this.dual_listbox();
-        // this.toggle_checkbox();
+        this.chosen_select();
+        this.bs_file();
+        this.dual_listbox();
+        this.toggle_checkbox();
     },
 
     /**
@@ -102,8 +92,7 @@ var dead_forms_basic = {
     init: function () {
         this.chosen_select();
         this.bs_file();
-        // this.dual_listbox();
-        // this.toggle_checkbox();
-        // this.display_maxlength();
+        this.dual_listbox();
+        this.toggle_checkbox();
     }
 };

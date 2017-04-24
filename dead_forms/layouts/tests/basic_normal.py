@@ -39,10 +39,34 @@ class BasicNormalLayout(BaseTestLayout):
             'field': field,
         }
 
+    def make_dualselect(self):
+        field = Field(
+            'field_dual_select_1',
+            css_class="dual-listbox"
+        )
+
+        return {
+            'description': "Dual Listbox",
+            'field': field,
+        }
+
+    def make_toggle(self):
+        field = Field(
+            'field_boolean_1',
+            css_class="toggle-checkbox"
+        )
+
+        return {
+            'description': "Toggle checkbpx",
+            'field': field,
+        }
+
     def make_layout(self):
         fields = [
             self.make_chosen_select(),
             self.make_bs_file(),
+            self.make_dualselect(),
+            self.make_toggle(),
         ]
 
         for field in fields:

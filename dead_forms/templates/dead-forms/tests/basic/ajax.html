@@ -1,22 +1,21 @@
 {% extends "dead-forms/tests/basic/base.html" %}
 
 {% block TEST_BODY_CONTENT %}
-    <span id="content">
-    </span>
+    <form action="{{ action|default_if_none:'#' }}" id="dead-form" class="no-submit dead-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <span id="content"></span>
+    </form>
 {% endblock %}
 
 {% block JS_BOTTOM %}
     <script type="application/javascript">
         var AJAX_URL = "{% url 'dead-forms:tests-basic-ajax' %}";
 
-        {% include "dead-forms/tests/basic/table.js" %}
-
         $(document).ready(function () {
             $.get(
                 AJAX_URL,
                 function(data){
                     $("#content").replaceWith(data.html);
-                    dar_forms_tests.init();
                 }
             );
         });

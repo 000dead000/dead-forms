@@ -44,3 +44,15 @@ class BasicNormalForm(BaseForm):
         label="BS File 1",
         required=False
     )
+
+    field_dual_select_1 = forms.MultipleChoiceField(
+        label="Dual list box",
+        choices=DUMMY_OPTIONS,
+        initial="",
+        required=False
+    )
+
+    field_boolean_1 = forms.BooleanField(
+        label="¿Acepta envio de correos electrónicos?",
+        required=False
+    )
