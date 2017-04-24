@@ -40,14 +40,14 @@ var dead_forms_basic = {
     /**
      * Bootstrap file style
      */
-    // bs_file: function () {
-    //     $(".bs-file").filestyle({
-    //         input: false,
-    //         buttonText: "&nbsp;Seleccionar archivo",
-    //         buttonName: "btn-primary",
-    //         iconName: "glyphicon glyphicon-inbox"
-    //     });
-    // },
+    bs_file: function () {
+        $(".bs-file").filestyle({
+            input: false,
+            buttonText: "&nbsp;Seleccionar archivo",
+            buttonName: "btn-primary",
+            iconName: "glyphicon glyphicon-inbox"
+        });
+    },
 
     /**
      * Dual listbox
@@ -90,7 +90,7 @@ var dead_forms_basic = {
      * After AJAX
      */
     after_ajax: function () {
-        this.chosen_select();
+        // this.chosen_select();
         // this.bs_file();
         // this.dual_listbox();
         // this.toggle_checkbox();
@@ -101,7 +101,7 @@ var dead_forms_basic = {
      */
     init: function () {
         this.chosen_select();
-        // this.bs_file();
+        this.bs_file();
         // this.dual_listbox();
         // this.toggle_checkbox();
         // this.display_maxlength();

@@ -39,3 +39,8 @@ class BasicNormalForm(BaseForm):
         help_text=" ",
         required=False
     )
+
+    field_bsfile = forms.FileField(
+        label="BS File 1",
+        required=False
+    )

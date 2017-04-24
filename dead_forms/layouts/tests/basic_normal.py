@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from crispy_forms.layout import Div
+from crispy_forms.layout import Field
 
 from dead_forms.layouts.basic import chosen_select_layout
 from .base import BaseTestLayout
@@ -27,9 +28,21 @@ class BasicNormalLayout(BaseTestLayout):
             'field': field,
         }
 
+    def make_bs_file(self):
+        field = Field(
+            'field_bsfile',
+            css_class="bs-file"
+        )
+
+        return {
+            'description': "BS File",
+            'field': field,
+        }
+
     def make_layout(self):
         fields = [
             self.make_chosen_select(),
+            self.make_bs_file(),
         ]
 
         for field in fields:
