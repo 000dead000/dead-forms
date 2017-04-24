@@ -12,12 +12,14 @@ class BasicNormalLayout(BaseTestLayout):
         field_1 = chosen_select_layout("field_chosen_select_1")
         field_2 = chosen_select_layout("field_chosen_select_2")
         field_3 = chosen_select_layout("field_chosen_select_3")
+        field_4 = chosen_select_layout("field_chosen_select_4", hint_text=True)
         description = "Chosen Select"
 
         field = Div(
             field_1,
             field_2,
             field_3,
+            field_4,
         )
 
         return {

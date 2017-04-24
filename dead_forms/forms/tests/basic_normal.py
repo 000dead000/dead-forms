@@ -31,3 +31,11 @@ class BasicNormalForm(BaseForm):
         help_text=" ",
         required=False
     )
+
+    field_chosen_select_4 = forms.ChoiceField(
+        label="Opciones 4 (hint_text=True)",
+        choices=BLANK_CHOICE_DASH + list(DUMMY_OPTIONS),
+        initial="",
+        help_text=" ",
+        required=False
+    )

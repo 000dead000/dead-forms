@@ -1,12 +1,39 @@
 var dead_forms_basic = {
     /**
+     * Change hint text
+     */
+    change_hint_text: function(element, text) {
+        var hint = element.next().next();
+
+        if (!hint.hasClass("dead-form-control-hint")) {
+            hint.addClass("dead-form-control-hint");
+        }
+
+        hint.html(text);
+    },
+
+    /**
      * Chosen select
      */
     chosen_select: function () {
+        var _this = this;
+
         $(".chosen-select").chosen({
             disable_search_threshold: 10,
             no_results_text: "No hay resultados para esta búsqueda",
             placeholder_text_multiple: "Selecciona algunos de los elementos"
+        }).change(function () {
+            if ($(this).hasClass("chosen-select-hint-text")) {
+                var element = $(this);
+                var value = element.val();
+                var text = "";
+                var hint = element.next().next();
+
+                if (value != "")
+                    text = element.find("option:selected").text();
+
+                _this.change_hint_text(element, text);
+            }
         });
     },
 
